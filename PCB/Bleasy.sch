@@ -9745,6 +9745,13 @@ Source: www.kingbright.com</description>
 <wire x1="198.12" y1="99.06" x2="198.12" y2="93.98" width="0.1524" layer="91"/>
 </segment>
 </net>
+<net name="N$13" class="0">
+<segment>
+<pinref part="E1" gate="G$1" pin="UART_CTS"/>
+<pinref part="E1" gate="G$1" pin="UART_RTS"/>
+<wire x1="157.48" y1="127" x2="157.48" y2="124.46" width="0.1524" layer="91"/>
+</segment>
+</net>
 </nets>
 </sheet>
 </sheets>
