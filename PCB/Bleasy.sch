@@ -10076,7 +10076,7 @@ type RDH, grid 15 mm</description>
 <part name="LED1" library="led" deviceset="LED" device="3MM"/>
 <part name="GND7" library="supply1" deviceset="GND" device=""/>
 <part name="+3V5" library="supply1" deviceset="+3V3" device=""/>
-<part name="SV1" library="con-lstb" deviceset="MA03-1" device=""/>
+<part name="GND" library="con-lstb" deviceset="MA03-1" device=""/>
 <part name="ADIO" library="con-lstb" deviceset="MA06-2" device=""/>
 <part name="GND8" library="supply1" deviceset="GND" device=""/>
 <part name="BAT2" library="con_bat_2032__s_" deviceset="CR2032_2+_1-" device="SKT"/>
@@ -10095,8 +10095,8 @@ type RDH, grid 15 mm</description>
 <instance part="C3" gate="G$1" x="10.16" y="91.44"/>
 <instance part="R1" gate="G$1" x="15.24" y="137.16" rot="R90"/>
 <instance part="+3V2" gate="G$1" x="15.24" y="147.32"/>
-<instance part="UART" gate="1" x="162.56" y="139.7" rot="R180"/>
-<instance part="+3V3" gate="G$1" x="142.24" y="152.4"/>
+<instance part="UART" gate="1" x="165.1" y="139.7" rot="R180"/>
+<instance part="+3V3" gate="G$1" x="160.02" y="114.3"/>
 <instance part="GND3" gate="1" x="142.24" y="142.24"/>
 <instance part="IC1" gate="1" x="50.8" y="104.14"/>
 <instance part="ICSP" gate="1" x="149.86" y="76.2" rot="R180"/>
@@ -10109,7 +10109,7 @@ type RDH, grid 15 mm</description>
 <instance part="LED1" gate="G$1" x="231.14" y="104.14"/>
 <instance part="GND7" gate="1" x="-2.54" y="27.94"/>
 <instance part="+3V5" gate="G$1" x="25.4" y="45.72"/>
-<instance part="SV1" gate="G$1" x="10.16" y="50.8" rot="R270"/>
+<instance part="GND" gate="G$1" x="10.16" y="50.8" rot="R270"/>
 <instance part="ADIO" gate="1" x="129.54" y="127"/>
 <instance part="GND8" gate="1" x="137.16" y="114.3"/>
 <instance part="BAT2" gate="B1" x="10.16" y="33.02"/>
@@ -10195,15 +10195,10 @@ type RDH, grid 15 mm</description>
 <wire x1="137.16" y1="119.38" x2="137.16" y2="116.84" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="GND3" gate="1" pin="GND"/>
-<wire x1="142.24" y1="144.78" x2="154.94" y2="144.78" width="0.1524" layer="91"/>
-<pinref part="UART" gate="1" pin="2"/>
-</segment>
-<segment>
 <pinref part="GND7" gate="1" pin="GND"/>
 <wire x1="-2.54" y1="30.48" x2="-2.54" y2="35.56" width="0.1524" layer="91"/>
 <wire x1="-2.54" y1="35.56" x2="2.54" y2="35.56" width="0.1524" layer="91"/>
-<pinref part="SV1" gate="G$1" pin="1"/>
+<pinref part="GND" gate="G$1" pin="1"/>
 <wire x1="7.62" y1="43.18" x2="2.54" y2="43.18" width="0.1524" layer="91"/>
 <wire x1="2.54" y1="43.18" x2="2.54" y2="35.56" width="0.1524" layer="91"/>
 <pinref part="BAT2" gate="B1" pin="NEG"/>
@@ -10214,6 +10209,12 @@ type RDH, grid 15 mm</description>
 <pinref part="GND6" gate="1" pin="GND"/>
 <pinref part="R2" gate="G$1" pin="1"/>
 <wire x1="231.14" y1="83.82" x2="231.14" y2="81.28" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="GND3" gate="1" pin="GND"/>
+<wire x1="142.24" y1="144.78" x2="142.24" y2="147.32" width="0.1524" layer="91"/>
+<wire x1="142.24" y1="147.32" x2="157.48" y2="147.32" width="0.1524" layer="91"/>
+<pinref part="UART" gate="1" pin="1"/>
 </segment>
 </net>
 <net name="+3V3" class="0">
@@ -10241,22 +10242,23 @@ type RDH, grid 15 mm</description>
 <wire x1="157.48" y1="78.74" x2="157.48" y2="83.82" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="+3V3" gate="G$1" pin="+3V3"/>
-<wire x1="142.24" y1="149.86" x2="142.24" y2="147.32" width="0.1524" layer="91"/>
-<pinref part="UART" gate="1" pin="1"/>
-<wire x1="142.24" y1="147.32" x2="154.94" y2="147.32" width="0.1524" layer="91"/>
-</segment>
-<segment>
 <pinref part="+3V5" gate="G$1" pin="+3V3"/>
 <wire x1="15.24" y1="35.56" x2="25.4" y2="35.56" width="0.1524" layer="91"/>
 <wire x1="25.4" y1="35.56" x2="25.4" y2="43.18" width="0.1524" layer="91"/>
-<pinref part="SV1" gate="G$1" pin="3"/>
+<pinref part="GND" gate="G$1" pin="3"/>
 <wire x1="12.7" y1="43.18" x2="15.24" y2="43.18" width="0.1524" layer="91"/>
 <wire x1="15.24" y1="43.18" x2="15.24" y2="35.56" width="0.1524" layer="91"/>
 <pinref part="BAT2" gate="B1" pin="POS1"/>
 <junction x="15.24" y="35.56"/>
 <pinref part="BAT2" gate="B1" pin="POS2"/>
 <wire x1="15.24" y1="30.48" x2="15.24" y2="35.56" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="+3V3" gate="G$1" pin="+3V3"/>
+<wire x1="160.02" y1="111.76" x2="152.4" y2="111.76" width="0.1524" layer="91"/>
+<wire x1="152.4" y1="111.76" x2="152.4" y2="139.7" width="0.1524" layer="91"/>
+<pinref part="UART" gate="1" pin="4"/>
+<wire x1="152.4" y1="139.7" x2="157.48" y2="139.7" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="RST" class="0">
@@ -10271,38 +10273,37 @@ type RDH, grid 15 mm</description>
 <wire x1="-12.7" y1="63.5" x2="-12.7" y2="132.08" width="0.1524" layer="91"/>
 <wire x1="-12.7" y1="132.08" x2="15.24" y2="132.08" width="0.1524" layer="91"/>
 <junction x="15.24" y="132.08"/>
-<pinref part="UART" gate="1" pin="5"/>
-<wire x1="154.94" y1="137.16" x2="152.4" y2="137.16" width="0.1524" layer="91"/>
-<wire x1="152.4" y1="106.68" x2="152.4" y2="127" width="0.1524" layer="91"/>
-<wire x1="152.4" y1="127" x2="152.4" y2="137.16" width="0.1524" layer="91"/>
-<wire x1="152.4" y1="127" x2="165.1" y2="127" width="0.1524" layer="91"/>
-<wire x1="165.1" y1="127" x2="165.1" y2="157.48" width="0.1524" layer="91"/>
-<wire x1="165.1" y1="157.48" x2="20.32" y2="157.48" width="0.1524" layer="91"/>
+<wire x1="170.18" y1="106.68" x2="170.18" y2="124.46" width="0.1524" layer="91"/>
+<wire x1="154.94" y1="124.46" x2="170.18" y2="124.46" width="0.1524" layer="91"/>
+<wire x1="170.18" y1="124.46" x2="170.18" y2="157.48" width="0.1524" layer="91"/>
+<wire x1="170.18" y1="157.48" x2="20.32" y2="157.48" width="0.1524" layer="91"/>
 <wire x1="20.32" y1="157.48" x2="20.32" y2="132.08" width="0.1524" layer="91"/>
-<junction x="152.4" y="127"/>
 <label x="149.86" y="137.16" size="1.778" layer="95"/>
 <pinref part="E1" gate="G$1" pin="RESET"/>
-<wire x1="152.4" y1="106.68" x2="190.5" y2="106.68" width="0.1524" layer="91"/>
+<wire x1="170.18" y1="106.68" x2="190.5" y2="106.68" width="0.1524" layer="91"/>
+<wire x1="154.94" y1="124.46" x2="154.94" y2="137.16" width="0.1524" layer="91"/>
+<pinref part="UART" gate="1" pin="5"/>
+<wire x1="154.94" y1="137.16" x2="157.48" y2="137.16" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="RX" class="0">
 <segment>
 <wire x1="81.28" y1="109.22" x2="147.32" y2="109.22" width="0.1524" layer="91"/>
-<wire x1="147.32" y1="109.22" x2="147.32" y2="142.24" width="0.1524" layer="91"/>
-<pinref part="UART" gate="1" pin="3"/>
-<wire x1="147.32" y1="142.24" x2="154.94" y2="142.24" width="0.1524" layer="91"/>
+<wire x1="147.32" y1="109.22" x2="147.32" y2="144.78" width="0.1524" layer="91"/>
 <pinref part="IC1" gate="1" pin="RX"/>
 <label x="149.86" y="142.24" size="1.778" layer="95"/>
+<wire x1="147.32" y1="144.78" x2="157.48" y2="144.78" width="0.1524" layer="91"/>
+<pinref part="UART" gate="1" pin="2"/>
 </segment>
 </net>
 <net name="TX" class="0">
 <segment>
 <wire x1="81.28" y1="106.68" x2="149.86" y2="106.68" width="0.1524" layer="91"/>
-<wire x1="149.86" y1="106.68" x2="149.86" y2="139.7" width="0.1524" layer="91"/>
-<pinref part="UART" gate="1" pin="4"/>
-<wire x1="149.86" y1="139.7" x2="154.94" y2="139.7" width="0.1524" layer="91"/>
+<wire x1="149.86" y1="106.68" x2="149.86" y2="142.24" width="0.1524" layer="91"/>
 <pinref part="IC1" gate="1" pin="TX"/>
 <label x="149.86" y="139.7" size="1.778" layer="95"/>
+<pinref part="UART" gate="1" pin="3"/>
+<wire x1="149.86" y1="142.24" x2="157.48" y2="142.24" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="MISO" class="0">
