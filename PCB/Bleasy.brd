@@ -64,7 +64,7 @@
 <wire x1="-2.8575" y1="62.22" x2="-2.8575" y2="0" width="0" layer="20"/>
 <text x="2.54" y="53.975" size="3.81" layer="1" font="vector">BLEasy</text>
 <text x="2.54" y="49.2125" size="1.016" layer="1" font="vector">v.0.1, by obayer&amp;mschaff
-github.com/obayer/bleazy</text>
+github.com/obayer/bleasy</text>
 </plain>
 <libraries>
 <library name="rcl">

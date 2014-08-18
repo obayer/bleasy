@@ -58,10 +58,10 @@
 </layers>
 <board>
 <plain>
-<wire x1="0" y1="0" x2="30.15" y2="-0.635" width="0" layer="20"/>
-<wire x1="30.15" y1="-0.635" x2="30.15" y2="61.585" width="0" layer="20"/>
-<wire x1="30.15" y1="61.585" x2="0" y2="61.585" width="0" layer="20"/>
-<wire x1="0" y1="61.585" x2="0" y2="0" width="0" layer="20"/>
+<wire x1="0" y1="0" x2="30.785" y2="-0.635" width="0" layer="20"/>
+<wire x1="30.785" y1="-0.635" x2="30.785" y2="62.22" width="0" layer="20"/>
+<wire x1="30.785" y1="62.22" x2="0" y2="62.22" width="0" layer="20"/>
+<wire x1="0" y1="62.22" x2="0" y2="0" width="0" layer="20"/>
 </plain>
 <libraries>
 <library name="rcl">
