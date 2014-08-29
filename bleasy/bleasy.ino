@@ -1,6 +1,6 @@
 
-#define POWERPIN 6
-#define RXPIN 8
+#define POWERPIN 8
+#define RXPIN 6
 #define TXPIN 7
 
 #include <avr/wdt.h>
