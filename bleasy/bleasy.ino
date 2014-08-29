@@ -1,7 +1,7 @@
 
-#define POWERPIN 8
-#define RXPIN 6
-#define TXPIN 7
+#define POWERPIN 14
+#define RXPIN 12
+#define TXPIN 13
 
 #include <avr/wdt.h>
 #include <avr/sleep.h>
@@ -91,8 +91,7 @@ void setup(){
 	//prescale_cpu();
 	Serial.begin(9600);
 	pinMode(POWERPIN, OUTPUT);
-	pinMode(13, OUTPUT);
-	digitalWrite(13, HIGH);
+	digitalWrite(POWERPIN, HIGH);
 	softSerial.begin(9600);
 	powerOnHM10();
 	setupHM10();
