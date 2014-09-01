@@ -1,7 +1,9 @@
 
-#define POWERPIN 14
-#define RXPIN 12
-#define TXPIN 13
+#define POWERPIN 8
+#define RXPIN 6
+#define TXPIN 7
+
+#define POWER_LED_PIN 13
 
 #include <avr/wdt.h>
 #include <avr/sleep.h>
@@ -232,10 +234,11 @@ void loop(){
 				sendCount=0;
 				state=STATE_SLEEP;
 				enable_watchdog();
-				digitalWrite(13, LOW);
+				digitalWrite(POWER_LED_PIN, LOW);
 				power_down();
-				digitalWrite(13, HIGH);
+				digitalWrite(POWER_LED_PIN, HIGH);
 				powerOnHM10();
+                                wakeHM10();
 			}
 			delay(100);
 
