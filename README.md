@@ -1,4 +1,4 @@
-bleazy
+BLEasy
 ======
 
-Arduino - HM10 sensor plattform
+Arduino/HM10 based sensor plattform
